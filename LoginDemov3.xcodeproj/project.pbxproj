@@ -15,6 +15,7 @@
 		2D87C54B1F67DDBA003EA339 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D87C5491F67DDBA003EA339 /* LaunchScreen.storyboard */; };
 		2D87C5561F67DDBA003EA339 /* LoginDemov3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D87C5551F67DDBA003EA339 /* LoginDemov3Tests.m */; };
 		2D87C5611F67DDBA003EA339 /* LoginDemov3UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D87C5601F67DDBA003EA339 /* LoginDemov3UITests.m */; };
+		2D87C56F1F67EFEE003EA339 /* Accounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D87C56E1F67EFEE003EA339 /* Accounts.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2D87C55C1F67DDBA003EA339 /* LoginDemov3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginDemov3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D87C5601F67DDBA003EA339 /* LoginDemov3UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginDemov3UITests.m; sourceTree = "<group>"; };
 		2D87C5621F67DDBA003EA339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D87C56E1F67EFEE003EA339 /* Accounts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Accounts.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				2D87C53C1F67DDBA003EA339 /* main.m */,
+				2D87C56E1F67EFEE003EA339 /* Accounts.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D87C56F1F67EFEE003EA339 /* Accounts.plist in Resources */,
 				2D87C54B1F67DDBA003EA339 /* LaunchScreen.storyboard in Resources */,
 				2D87C5481F67DDBA003EA339 /* Assets.xcassets in Resources */,
 				2D87C5461F67DDBA003EA339 /* Main.storyboard in Resources */,
@@ -431,6 +435,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4Y2PN6E5NM;
 				INFOPLIST_FILE = LoginDemov3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zsombor.LoginDemov3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,6 +448,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4Y2PN6E5NM;
 				INFOPLIST_FILE = LoginDemov3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zsombor.LoginDemov3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
