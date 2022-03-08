@@ -26,10 +26,8 @@
 - (BOOL)checkLogin{
     NSString* userKeyPath = [NSString stringWithFormat:@"Username"];
     NSString* passKeyPath = [NSString stringWithFormat:@"Password"];
-    NSString* expectedUsername = [self.passwordStore valueForKeyPath:userKeyPath];
+    NSString* expectedUsername =  [self.passwordStore valueForKeyPath:userKeyPath];
     NSString* expectedPassword = [self.passwordStore valueForKeyPath:passKeyPath];
-    //NSLog(expectedUsername);
-    //NSLog(expectedPassword);
     return ([_UsernameField.text isEqual: expectedUsername] && [_PasswordField.text isEqual: expectedPassword]);
     }
 
@@ -41,10 +39,6 @@
         [[[UIAlertView alloc] initWithTitle:@"Login result" message:@"Failed."
                                    delegate:nil cancelButtonTitle:@"Sorry" otherButtonTitles:nil] show];
     }
-}
-
-- (BOOL)checkLoginHardcoded{
-    return ([_UsernameField.text isEqual: @"frodo"] && [_PasswordField.text isEqual: @"lives"]);
 }
 
 - (void)viewDidLoad {
@@ -65,15 +59,5 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)Login2ButtonPressed:(id)sender {
-    if ([self checkLoginHardcoded]) {
-        [[[UIAlertView alloc] initWithTitle:@"Login result" message:@"Logged in successfully!"
-                                   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-    }else{
-        [[[UIAlertView alloc] initWithTitle:@"Login result" message:@"Failed."
-                                   delegate:nil cancelButtonTitle:@"Sorry" otherButtonTitles:nil] show];
-    }
 }
 @end

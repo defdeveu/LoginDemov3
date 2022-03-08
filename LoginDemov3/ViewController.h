@@ -10,7 +10,7 @@
 
 @interface ViewController : UIViewController <UITextFieldDelegate>
 
-- (IBAction)Login2ButtonPressed:(id)sender;
+- (IBAction)LoginButtonPressed:(id)sender;
 
 @end
 
