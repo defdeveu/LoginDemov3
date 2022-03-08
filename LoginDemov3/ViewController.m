@@ -23,21 +23,27 @@
     return [[NSDictionary alloc] initWithContentsOfFile:filename];
 }
 
-- (BOOL)checkLogin{
-    NSString* userKeyPath = [NSString stringWithFormat:@"Username"];
+- (BOOL)checkLogin:(NSString *) password {
     NSString* passKeyPath = [NSString stringWithFormat:@"Password"];
-    NSString* expectedUsername =  [self.passwordStore valueForKeyPath:userKeyPath];
     NSString* expectedPassword = [self.passwordStore valueForKeyPath:passKeyPath];
-    return ([_UsernameField.text isEqual: expectedUsername] && [_PasswordField.text isEqual: expectedPassword]);
+    return ([password isEqual: expectedPassword]);
     }
 
+- (void) userLoginSucceeded{
+    [[[UIAlertView alloc] initWithTitle:@"Login result" message:@"Logged in successfully!"
+                               delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+}
+
+- (void) userLoginFailed{
+    [[[UIAlertView alloc] initWithTitle:@"Login result" message:@"Failed."
+                               delegate:nil cancelButtonTitle:@"Sorry" otherButtonTitles:nil] show];
+}
+
 - (IBAction)LoginButtonPressed:(id)sender {
-    if ([self checkLogin]) {
-        [[[UIAlertView alloc] initWithTitle:@"Login result" message:@"Logged in successfully!"
-                                   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    if ([self checkLogin:[_PasswordField text]]) {
+        [self userLoginSucceeded];
     }else{
-        [[[UIAlertView alloc] initWithTitle:@"Login result" message:@"Failed."
-                                   delegate:nil cancelButtonTitle:@"Sorry" otherButtonTitles:nil] show];
+        [self userLoginFailed];
     }
 }
 
